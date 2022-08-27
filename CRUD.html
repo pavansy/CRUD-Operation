@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Operation</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c4254e24a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      h3 {
+        text-align: center;
+      }
+      .form-group span {
+        position: absolute;
+        right: 17px;
+        font-size: 14px;
+        color: red;
+      }
+
+      .form-group span i {
+        color: seagreen;
+      }
+
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        height: 20px;
+      }
+
+      tr,
+      td {
+        vertical-align: middle !important;
+      }
+      .table-width-5 {
+        width: 5%;
+      }
+
+      .table-width-25 {
+        width: 25%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col-md-4 mb-5">
+          <h3>Details Form</h3>
+          <form class="add-post-form">
+            <div class="form-group">
+              <label for="name-value">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name-value"
+                autocomplete="on"
+              />
+              <span id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone-value">Phone No</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone-value"
+                autocomplete="on"
+              />
+              <span id="phone-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email-value">Email</label>
+              <input
+                type="email" class="form-control" id="email-value" autocomplete="on"/>
+              <span id="email-error"></span>
+            </div>
+            <button type="submit" id="btn" class="btn btn-primary">
+              Submit
+            </button>
+          </form>
+          <button type="submit" id="btn-update" class="btn btn-success mt-1">
+            Update
+          </button>
+        </div>
+        <div class="col-md-8 mt-5">
+          <table class="table table-bordered table-responsive-sm">
+            <thead>
+              <tr>
+                <th class="table-width-5">Sl.No</th>
+                <th class="table-width-25">Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th colspan="2" class="table-width-5">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="post-list">
+              <!-- <tr>
+                <td>1</td>
+                <td>Peter</td>
+                <td>6688994433</td>
+                <td>peter@gmail.com</td>
+                <td>
+                  <button type="button" class="btn btn-info">Edit</button>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Tony</td>
+                <td>1234567890</td>
+                <td>tony@gmail.com</td>
+                <td>
+                  <button type="button" class="btn btn-info">Edit</button>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Jessica</td>
+                <td>9653064156</td>
+                <td>jessica@gmail.com</td>
+                <td>
+                  <button type="button" class="btn btn-info">Edit</button>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-danger">Delete</button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./CRUD.js"></script>
+  </body>
+</html>
